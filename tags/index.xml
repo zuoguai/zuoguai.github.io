@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Jane - A super concise theme for Hugo</title>
+    <link>http://localhost:56182/tags/</link>
+    <description>Recent content in Tags on Jane - A super concise theme for Hugo</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>me@example.com (Jane)</managingEditor>
+    <webMaster>me@example.com (Jane)</webMaster>
+    <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
+    <atom:link href="http://localhost:56182/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Preview</title>
+      <link>http://localhost:56182/tags/preview/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/preview/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Shortcodes</title>
+      <link>http://localhost:56182/tags/shortcodes/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/shortcodes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag-6</title>
+      <link>http://localhost:56182/tags/tag-6/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/tag-6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Update</title>
+      <link>http://localhost:56182/tags/update/</link>
+      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/update/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Contribute</title>
+      <link>http://localhost:56182/tags/contribute/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/contribute/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Go</title>
+      <link>http://localhost:56182/tags/go/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/go/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Golang</title>
+      <link>http://localhost:56182/tags/golang/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/golang/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hugo</title>
+      <link>http://localhost:56182/tags/hugo/</link>
+      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Development</title>
+      <link>http://localhost:56182/tags/development/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Templates</title>
+      <link>http://localhost:56182/tags/templates/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/templates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Themes</title>
+      <link>http://localhost:56182/tags/themes/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/themes/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Toc</title>
+      <link>http://localhost:56182/tags/toc/</link>
+      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/toc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Math</title>
+      <link>http://localhost:56182/tags/math/</link>
+      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/math/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Image</title>
+      <link>http://localhost:56182/tags/image/</link>
+      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/image/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag-7</title>
+      <link>http://localhost:56182/tags/tag-7/</link>
+      <pubDate>Sat, 03 Mar 2018 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/tag-7/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Footnote</title>
+      <link>http://localhost:56182/tags/footnote/</link>
+      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/footnote/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Markdown</title>
+      <link>http://localhost:56182/tags/markdown/</link>
+      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag-11</title>
+      <link>http://localhost:56182/tags/tag-11/</link>
+      <pubDate>Thu, 01 Mar 2018 16:01:23 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/tag-11/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>English</title>
+      <link>http://localhost:56182/tags/english/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/english/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tag-2</title>
+      <link>http://localhost:56182/tags/tag-2/</link>
+      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate><author>me@example.com (Jane)</author>
+      <guid>http://localhost:56182/tags/tag-2/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
