@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on 你好，旅行者</title>
-    <link>http://localhost:1313/tags/go/</link>
+    <link>http://zuoguai.github.io/tags/go/</link>
     <description>Recent content in Go on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
@@ -10,12 +10,12 @@
     <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://zuoguai.github.io/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
       <description>&lt;h3 id=&#34;数据结构&#34;&gt;数据结构&lt;/h3&gt;&#xA;&lt;p&gt;string 底层byte数组，不可修改&lt;/p&gt;&#xA;&lt;p&gt;slice 自动扩容，引用传值&lt;/p&gt;&#xA;&lt;p&gt;map 读写互斥，哈希冲突，扩容&lt;/p&gt;&#xA;&lt;p&gt;sync.Map 并发安全，dirty/read双向数据流转，nil/expunged/v（软删除，硬删除，正常）&lt;/p&gt;</description>
     </item>
   </channel>

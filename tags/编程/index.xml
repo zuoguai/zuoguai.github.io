@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>编程 on 你好，旅行者</title>
-    <link>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/</link>
+    <link>http://zuoguai.github.io/tags/%E7%BC%96%E7%A8%8B/</link>
     <description>Recent content in 编程 on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
@@ -10,47 +10,47 @@
     <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://zuoguai.github.io/tags/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
       <description>&lt;h3 id=&#34;数据结构&#34;&gt;数据结构&lt;/h3&gt;&#xA;&lt;p&gt;string 底层byte数组，不可修改&lt;/p&gt;&#xA;&lt;p&gt;slice 自动扩容，引用传值&lt;/p&gt;&#xA;&lt;p&gt;map 读写互斥，哈希冲突，扩容&lt;/p&gt;&#xA;&lt;p&gt;sync.Map 并发安全，dirty/read双向数据流转，nil/expunged/v（软删除，硬删除，正常）&lt;/p&gt;</description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</guid>
       <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/post/%E7%BC%96%E7%A8%8B/python/</link>
+      <link>http://zuoguai.github.io/post/%E7%BC%96%E7%A8%8B/python/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E7%BC%96%E7%A8%8B/python/</guid>
+      <guid>http://zuoguai.github.io/post/%E7%BC%96%E7%A8%8B/python/</guid>
       <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
     </item>
     <item>
       <title>Redis</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/redis/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/redis/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/redis/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/redis/</guid>
       <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
     </item>
     <item>
       <title>操作系统</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
       <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
     </item>
     <item>
       <title>计算机网络</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
     </item>
   </channel>

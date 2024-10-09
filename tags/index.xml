@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 你好，旅行者</title>
-    <link>http://localhost:1313/tags/</link>
+    <link>http://zuoguai.github.io/tags/</link>
     <description>Recent content in Tags on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
@@ -10,82 +10,82 @@
     <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
     <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://zuoguai.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go</title>
-      <link>http://localhost:1313/tags/go/</link>
+      <link>http://zuoguai.github.io/tags/go/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/go/</guid>
+      <guid>http://zuoguai.github.io/tags/go/</guid>
       <description></description>
     </item>
     <item>
       <title>Golang</title>
-      <link>http://localhost:1313/tags/golang/</link>
+      <link>http://zuoguai.github.io/tags/golang/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/golang/</guid>
+      <guid>http://zuoguai.github.io/tags/golang/</guid>
       <description></description>
     </item>
     <item>
       <title>MySQL</title>
-      <link>http://localhost:1313/tags/mysql/</link>
+      <link>http://zuoguai.github.io/tags/mysql/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/mysql/</guid>
+      <guid>http://zuoguai.github.io/tags/mysql/</guid>
       <description></description>
     </item>
     <item>
       <title>Python</title>
-      <link>http://localhost:1313/tags/python/</link>
+      <link>http://zuoguai.github.io/tags/python/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/python/</guid>
+      <guid>http://zuoguai.github.io/tags/python/</guid>
       <description></description>
     </item>
     <item>
       <title>Redis</title>
-      <link>http://localhost:1313/tags/redis/</link>
+      <link>http://zuoguai.github.io/tags/redis/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/redis/</guid>
+      <guid>http://zuoguai.github.io/tags/redis/</guid>
       <description></description>
     </item>
     <item>
       <title>北京</title>
-      <link>http://localhost:1313/tags/%E5%8C%97%E4%BA%AC/</link>
+      <link>http://zuoguai.github.io/tags/%E5%8C%97%E4%BA%AC/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E5%8C%97%E4%BA%AC/</guid>
+      <guid>http://zuoguai.github.io/tags/%E5%8C%97%E4%BA%AC/</guid>
       <description></description>
     </item>
     <item>
       <title>地点</title>
-      <link>http://localhost:1313/tags/%E5%9C%B0%E7%82%B9/</link>
+      <link>http://zuoguai.github.io/tags/%E5%9C%B0%E7%82%B9/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E5%9C%B0%E7%82%B9/</guid>
+      <guid>http://zuoguai.github.io/tags/%E5%9C%B0%E7%82%B9/</guid>
       <description></description>
     </item>
     <item>
       <title>操作系统</title>
-      <link>http://localhost:1313/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <link>http://zuoguai.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>http://zuoguai.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     <item>
       <title>数据库</title>
-      <link>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
+      <link>http://zuoguai.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
+      <guid>http://zuoguai.github.io/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/</guid>
       <description></description>
     </item>
     <item>
       <title>编程</title>
-      <link>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/</link>
+      <link>http://zuoguai.github.io/tags/%E7%BC%96%E7%A8%8B/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/</guid>
+      <guid>http://zuoguai.github.io/tags/%E7%BC%96%E7%A8%8B/</guid>
       <description></description>
     </item>
     <item>
       <title>计算机网络</title>
-      <link>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
+      <link>http://zuoguai.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
+      <guid>http://zuoguai.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
       <description></description>
     </item>
   </channel>
