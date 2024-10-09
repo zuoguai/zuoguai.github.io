@@ -13,10 +13,10 @@
     <atom:link href="http://localhost:1313/tags/go/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang</title>
-      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/</link>
+      <link>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
       <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/</guid>
-      <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;</description>
+      <guid>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
+      <description>&lt;h3 id=&#34;数据结构&#34;&gt;数据结构&lt;/h3&gt;&#xA;&lt;p&gt;string 底层byte数组，不可修改&lt;/p&gt;&#xA;&lt;p&gt;slice 自动扩容，引用传值&lt;/p&gt;&#xA;&lt;p&gt;map 读写互斥，哈希冲突，扩容&lt;/p&gt;&#xA;&lt;p&gt;sync.Map 并发安全，dirty/read双向数据流转，nil/expunged/v（软删除，硬删除，正常）&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

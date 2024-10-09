@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/</loc>
+    <loc>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/golang/golang/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -44,7 +44,7 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/mysql/</loc>
+    <loc>http://localhost:1313/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</loc>
     <lastmod>2024-10-09T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
