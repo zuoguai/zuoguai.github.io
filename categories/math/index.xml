@@ -6,15 +6,15 @@
     <description>Recent content in Math on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>zuoguai2023@foxmail.com (作怪)</managingEditor>
-    <webMaster>zuoguai2023@foxmail.com (作怪)</webMaster>
+    <managingEditor>zuoguai2023@foxmail.com (zuoguai)</managingEditor>
+    <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
     <lastBuildDate>Tue, 05 Mar 2019 16:01:23 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Demo: Math</title>
       <link>http://localhost:1313/post/demo/5-math/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
+      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
       <guid>http://localhost:1313/post/demo/5-math/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.intmath.com/cg5/katex-mathjax-comparison.php&#34;&gt;KaTeX and MathJax Comparison Demo, currently processed as KaTeX&lt;/a&gt;&lt;/p&gt;</description>
     </item>

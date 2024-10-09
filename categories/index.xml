@@ -6,80 +6,9 @@
     <description>Recent content in Categories on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>zuoguai2023@foxmail.com (作怪)</managingEditor>
-    <webMaster>zuoguai2023@foxmail.com (作怪)</webMaster>
+    <managingEditor>zuoguai2023@foxmail.com (zuoguai)</managingEditor>
+    <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
-    <lastBuildDate>Fri, 20 Sep 2024 16:01:23 +0800</lastBuildDate>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Docs</title>
-      <link>http://localhost:1313/categories/docs/</link>
-      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/docs/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Index</title>
-      <link>http://localhost:1313/categories/index/</link>
-      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/index/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Shortcodes</title>
-      <link>http://localhost:1313/categories/shortcodes/</link>
-      <pubDate>Fri, 20 Sep 2024 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/shortcodes/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Development</title>
-      <link>http://localhost:1313/categories/development/</link>
-      <pubDate>Sat, 15 Oct 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/development/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Golang</title>
-      <link>http://localhost:1313/categories/golang/</link>
-      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/golang/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Demo</title>
-      <link>http://localhost:1313/categories/demo/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/demo/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Math</title>
-      <link>http://localhost:1313/categories/math/</link>
-      <pubDate>Mon, 04 Mar 2019 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/math/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>English</title>
-      <link>http://localhost:1313/categories/english/</link>
-      <pubDate>Thu, 31 Aug 2017 15:43:48 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/english/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Test</title>
-      <link>http://localhost:1313/categories/test/</link>
-      <pubDate>Wed, 30 Aug 2017 15:43:48 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/test/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Syntax Highlighting</title>
-      <link>http://localhost:1313/categories/syntax-highlighting/</link>
-      <pubDate>Tue, 30 Aug 2011 16:01:23 +0800</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/categories/syntax-highlighting/</guid>
-      <description></description>
-    </item>
   </channel>
 </rss>

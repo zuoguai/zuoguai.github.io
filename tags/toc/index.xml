@@ -6,30 +6,23 @@
     <description>Recent content in Toc on 你好，旅行者</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <managingEditor>zuoguai2023@foxmail.com (作怪)</managingEditor>
-    <webMaster>zuoguai2023@foxmail.com (作怪)</webMaster>
+    <managingEditor>zuoguai2023@foxmail.com (zuoguai)</managingEditor>
+    <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
-    <lastBuildDate>Tue, 22 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 21 Feb 2022 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/toc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Demo: toc</title>
-      <link>http://localhost:1313/post/demo/2-toc/</link>
-      <pubDate>Tue, 22 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/post/demo/2-toc/</guid>
-      <description>&lt;h2 id=&#34;header&#34;&gt;Header&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;header-1&#34;&gt;Header&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
-    </item>
-    <item>
       <title>Demo: toc, global toc is true, but this post should not show toc</title>
-      <link>http://localhost:1313/post/other/test-toc/global-toc-except-this/</link>
-      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/post/other/test-toc/global-toc-except-this/</guid>
+      <link>http://localhost:1313/other/test-toc/global-toc-except-this/</link>
+      <pubDate>Mon, 21 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
+      <guid>http://localhost:1313/other/test-toc/global-toc-except-this/</guid>
       <description>&lt;h2 id=&#34;header&#34;&gt;Header&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;&#xA;&lt;h2 id=&#34;header-1&#34;&gt;Header&lt;/h2&gt;&#xA;&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
     </item>
     <item>
       <title>no header, no toc</title>
-      <link>http://localhost:1313/post/other/test-toc/no-header-dont-show-toc/</link>
-      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (作怪)</author>
-      <guid>http://localhost:1313/post/other/test-toc/no-header-dont-show-toc/</guid>
+      <link>http://localhost:1313/other/test-toc/no-header-dont-show-toc/</link>
+      <pubDate>Sun, 20 Feb 2022 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
+      <guid>http://localhost:1313/other/test-toc/no-header-dont-show-toc/</guid>
       <description>&lt;p&gt;This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&amp;rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&amp;rsquo;t cover using CSS to style your theme.&lt;/p&gt;</description>
     </item>
   </channel>

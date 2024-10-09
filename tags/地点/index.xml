@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>地点 on 你好，旅行者</title>
+    <link>http://localhost:1313/tags/%E5%9C%B0%E7%82%B9/</link>
+    <description>Recent content in 地点 on 你好，旅行者</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <managingEditor>zuoguai2023@foxmail.com (zuoguai)</managingEditor>
+    <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
+    <copyright>文成武德，千秋万载</copyright>
+    <lastBuildDate>Wed, 09 Oct 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/%E5%9C%B0%E7%82%B9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>北京-奥林匹克公园</title>
+      <link>http://localhost:1313/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/</link>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate><author>zuoguai2023@foxmail.com (zuoguai)</author>
+      <guid>http://localhost:1313/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/</guid>
+      <description>&lt;h2 id=&#34;北京-奥林匹克公园&#34;&gt;北京-奥林匹克公园&lt;/h2&gt;&#xA;&lt;p&gt;&lt;img alt=&#34;image-20241009220930870&#34; src=&#34;../../../static/images/image-20241009220930870-17284829794881.png&#34;&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
