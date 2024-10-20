@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>你好，旅行者</title>
-    <link>http://zuoguai.github.io/</link>
+    <link>http://localhost:1313/</link>
     <description>Recent content on 你好，旅行者</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
@@ -11,114 +11,8 @@
     <copyright>文成武德，千秋万载</copyright>
     <lastBuildDate>Wed, 09 Oct 2024 20:51:43 +0800</lastBuildDate>
     
-        <atom:link href="http://zuoguai.github.io/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Golang</title>
-      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/golang/golang/</guid>
-      
-        <description>&lt;h3 id=&#34;数据结构&#34;&gt;数据结构&lt;/h3&gt;
-&lt;p&gt;string 底层byte数组，不可修改&lt;/p&gt;
-&lt;p&gt;slice 自动扩容，引用传值&lt;/p&gt;
-&lt;p&gt;map 读写互斥，哈希冲突，扩容&lt;/p&gt;
-&lt;p&gt;sync.Map 并发安全，dirty/read双向数据流转，nil/expunged/v（软删除，硬删除，正常）&lt;/p&gt;
-&lt;p&gt;channel 有无缓冲，阻塞goroutinue，讨论读写情况&lt;/p&gt;
-&lt;p&gt;interface 底层&lt;/p&gt;
-&lt;p&gt;context 四种实现&lt;/p&gt;
-&lt;h3 id=&#34;协程调度gmp&#34;&gt;协程调度GMP&lt;/h3&gt;
-&lt;p&gt;核心思想：用户态线程，降低切换成本，本地队列，偷取机制，出让机制，g0，全局队列防止饿死&lt;/p&gt;
-&lt;p&gt;G：goroutinue&lt;/p&gt;
-&lt;p&gt;M：线程抽象&lt;/p&gt;
-&lt;p&gt;P：本地队列&lt;/p&gt;
-&lt;h3 id=&#34;垃圾回收&#34;&gt;垃圾回收&lt;/h3&gt;
-&lt;p&gt;标记清除&lt;/p&gt;
-&lt;p&gt;。。。&lt;/p&gt;
-&lt;p&gt;三色混合屏障写&lt;/p&gt;
-&lt;h3 id=&#34;逃逸分析&#34;&gt;逃逸分析&lt;/h3&gt;
-&lt;p&gt;编译时由决定变量的分配，堆/栈&lt;/p&gt;
-&lt;p&gt;逃逸的情况：大变量（大切片），无法确定类型的interface，指针逃逸&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>MySQL</title>
-      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/mysql/mysql/</guid>
-      
-        <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>http://zuoguai.github.io/post/%E7%BC%96%E7%A8%8B/python/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E7%BC%96%E7%A8%8B/python/</guid>
-      
-        <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>Redis</title>
-      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/redis/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/redis/</guid>
-      
-        <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>北京-奥林匹克公园</title>
-      <link>http://zuoguai.github.io/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/</guid>
-      
-        <description>&lt;h3 id=&#34;奥林匹克塔&#34;&gt;奥林匹克塔&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;image-20241009224523745&#34; src=&#34;http://zuoguai.github.io/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/image-20241009224523745.png&#34;&gt;&lt;/p&gt;
-&lt;h3 id=&#34;国家会议中心&#34;&gt;国家会议中心&lt;/h3&gt;
-&lt;p&gt;&lt;img alt=&#34;image-20241009224906529&#34; src=&#34;http://zuoguai.github.io/post/%E5%9C%B0%E7%82%B9/%E5%8C%97%E4%BA%AC-%E5%A5%A5%E6%9E%97%E5%8C%B9%E5%85%8B%E5%85%AC%E5%9B%AD/image-20241009224906529.png&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>操作系统</title>
-      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
-      
-        <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>计算机网络</title>
-      <link>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</link>
-      <pubDate>Wed, 09 Oct 2024 00:00:00 +0000</pubDate>
-      <author>zuoguai2023@foxmail.com (zuoguai)</author>
-      <guid>http://zuoguai.github.io/post/%E5%AD%A6%E4%B9%A0/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/</guid>
-      
-        <description>&lt;h2 id=&#34;建设中&#34;&gt;建设中。。。&lt;/h2&gt;
-</description>
-      
-    </item>
     
   </channel>
 </rss>
