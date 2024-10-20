@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage" data-theme="light">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>
+  Git cheat sheet中文 - 你好，旅行者
+  </title>
+
+
+
+<meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+
+<meta name="MobileOptimized" content="width" />
+<meta name="HandheldFriendly" content="true" />
+
+
+<meta name="applicable-device" content="pc,mobile">
+
+<meta name="color-scheme" content="light dark" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+<meta name="mobile-web-app-capable" content="yes">
+
+<meta name="author" content="zuoguai" />
+<meta name="description" content="&#43;&#43;&#43;
+该文档从Git cheat sheet搬运，以便学习
+索引 配置 配置文件 创建 本地修改 搜索 提交历史 移动/重命名 分支与标签 更新与发布 合并与重置 撤销 Git Flow 配置 列出当前配置： Copy$ git config --list列出 repository 配置： Copy$ git config --local --list列出全局配置： Copy$ git config --global --list列出系统配置： Copy$ git config --system --list设置用户名： Copy$ git config --global user.name &#34;[firstname lastname]&#34;设置用户邮箱： Copy$ git config --global user.email &#34;[valid-email]&#34;设置 git 命令行输出为彩色： Copy$ git config --global color.ui auto设置 git 使用的文本编辑器： Copy$ git config --global core.editor vi配置文件 Repository 配置对应的配置文件路径 [&ndash;local]： Copy&lt;repo&gt;/.git/config用户全局配置对应的配置文件路径 [&ndash;global]： Copy~/.gitconfig系统配置对应的配置文件路径 [&ndash;system]： Copy/etc/gitconfig创建 复制一个已创建的仓库： Copy# 通过 SSH $ git clone ssh://user@domain.com/repo.git # 通过 HTTP $ git clone http://domain.com/user/repo.git在当前目录创建一个新的本地仓库： Copy$ git init在指定目录创建一个新的本地仓库： Copy$ git init &lt;directory&gt;本地修改 显示工作路径下已修改的文件： Copy$ git status显示提交文件的变化： Copy$ git diff显示指定文件的变化： Copy$ git diff &lt;file&gt;把当前所有修改添加到下次提交中： Copy$ git add .把对某个文件的修改添加到下次提交中： Copy$ git add -p &lt;file&gt;把指定文件的修改添加到下次提交中： Copy$ git add &lt;filename1&gt; &lt;filename2&gt;提交本地的所有修改： Copy$ git commit -a提交之前已标记的变化： Copy$ git commit附加消息提交： Copy$ git commit -m &#39;message here&#39;提交，并将提交时间设置为之前的某个日期： Copy$ git commit --date=&#34;`date --date=&#39;n day ago&#39;`&#34; -am &#34;Commit Message&#34;修改上次提交 请勿修改已发布的提交记录！
+" />
+
+<meta name="keywords"
+  content="一, 统, 江, 湖" />
+
+
+
+
+<meta name="generator" content="Hugo 0.136.2" />
+
+
+<link rel="canonical" href="http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/" />
+
+
+
+
+
+<link rel="icon" href="/favicon.ico" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/css/style.min.66289e66c834d38e351ed7182dec61ffeb2e48674313e6ab5ec03741d07fbbae.css" integrity="sha256-ZiieZsg00441HtcYLexh/&#43;suSGdDE&#43;arXsA3QdB/u64=" media="screen"
+  crossorigin="anonymous">
+
+
+
+
+
+
+
+<meta property="og:url" content="http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/">
+  <meta property="og:site_name" content="你好，旅行者">
+  <meta property="og:title" content="Git cheat sheet中文">
+  <meta property="og:description" content="&#43;&#43;&#43;
+该文档从Git cheat sheet搬运，以便学习
+索引 配置 配置文件 创建 本地修改 搜索 提交历史 移动/重命名 分支与标签 更新与发布 合并与重置 撤销 Git Flow 配置 列出当前配置： Copy$ git config --list列出 repository 配置： Copy$ git config --local --list列出全局配置： Copy$ git config --global --list列出系统配置： Copy$ git config --system --list设置用户名： Copy$ git config --global user.name &#34;[firstname lastname]&#34;设置用户邮箱： Copy$ git config --global user.email &#34;[valid-email]&#34;设置 git 命令行输出为彩色： Copy$ git config --global color.ui auto设置 git 使用的文本编辑器： Copy$ git config --global core.editor vi配置文件 Repository 配置对应的配置文件路径 [–local]： Copy&lt;repo&gt;/.git/config用户全局配置对应的配置文件路径 [–global]： Copy~/.gitconfig系统配置对应的配置文件路径 [–system]： Copy/etc/gitconfig创建 复制一个已创建的仓库： Copy# 通过 SSH $ git clone ssh://user@domain.com/repo.git # 通过 HTTP $ git clone http://domain.com/user/repo.git在当前目录创建一个新的本地仓库： Copy$ git init在指定目录创建一个新的本地仓库： Copy$ git init &lt;directory&gt;本地修改 显示工作路径下已修改的文件： Copy$ git status显示提交文件的变化： Copy$ git diff显示指定文件的变化： Copy$ git diff &lt;file&gt;把当前所有修改添加到下次提交中： Copy$ git add .把对某个文件的修改添加到下次提交中： Copy$ git add -p &lt;file&gt;把指定文件的修改添加到下次提交中： Copy$ git add &lt;filename1&gt; &lt;filename2&gt;提交本地的所有修改： Copy$ git commit -a提交之前已标记的变化： Copy$ git commit附加消息提交： Copy$ git commit -m &#39;message here&#39;提交，并将提交时间设置为之前的某个日期： Copy$ git commit --date=&#34;`date --date=&#39;n day ago&#39;`&#34; -am &#34;Commit Message&#34;修改上次提交 请勿修改已发布的提交记录！">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-10-20T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-20T00:00:00+00:00">
+    <meta property="article:tag" content="编程">
+
+  <meta itemprop="name" content="Git cheat sheet中文">
+  <meta itemprop="description" content="&#43;&#43;&#43;
+该文档从Git cheat sheet搬运，以便学习
+索引 配置 配置文件 创建 本地修改 搜索 提交历史 移动/重命名 分支与标签 更新与发布 合并与重置 撤销 Git Flow 配置 列出当前配置： Copy$ git config --list列出 repository 配置： Copy$ git config --local --list列出全局配置： Copy$ git config --global --list列出系统配置： Copy$ git config --system --list设置用户名： Copy$ git config --global user.name &#34;[firstname lastname]&#34;设置用户邮箱： Copy$ git config --global user.email &#34;[valid-email]&#34;设置 git 命令行输出为彩色： Copy$ git config --global color.ui auto设置 git 使用的文本编辑器： Copy$ git config --global core.editor vi配置文件 Repository 配置对应的配置文件路径 [–local]： Copy&lt;repo&gt;/.git/config用户全局配置对应的配置文件路径 [–global]： Copy~/.gitconfig系统配置对应的配置文件路径 [–system]： Copy/etc/gitconfig创建 复制一个已创建的仓库： Copy# 通过 SSH $ git clone ssh://user@domain.com/repo.git # 通过 HTTP $ git clone http://domain.com/user/repo.git在当前目录创建一个新的本地仓库： Copy$ git init在指定目录创建一个新的本地仓库： Copy$ git init &lt;directory&gt;本地修改 显示工作路径下已修改的文件： Copy$ git status显示提交文件的变化： Copy$ git diff显示指定文件的变化： Copy$ git diff &lt;file&gt;把当前所有修改添加到下次提交中： Copy$ git add .把对某个文件的修改添加到下次提交中： Copy$ git add -p &lt;file&gt;把指定文件的修改添加到下次提交中： Copy$ git add &lt;filename1&gt; &lt;filename2&gt;提交本地的所有修改： Copy$ git commit -a提交之前已标记的变化： Copy$ git commit附加消息提交： Copy$ git commit -m &#39;message here&#39;提交，并将提交时间设置为之前的某个日期： Copy$ git commit --date=&#34;`date --date=&#39;n day ago&#39;`&#34; -am &#34;Commit Message&#34;修改上次提交 请勿修改已发布的提交记录！">
+  <meta itemprop="datePublished" content="2024-10-20T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-10-20T00:00:00+00:00">
+  <meta itemprop="wordCount" content="3026">
+  <meta itemprop="keywords" content="编程">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Git cheat sheet中文">
+  <meta name="twitter:description" content="&#43;&#43;&#43;
+该文档从Git cheat sheet搬运，以便学习
+索引 配置 配置文件 创建 本地修改 搜索 提交历史 移动/重命名 分支与标签 更新与发布 合并与重置 撤销 Git Flow 配置 列出当前配置： Copy$ git config --list列出 repository 配置： Copy$ git config --local --list列出全局配置： Copy$ git config --global --list列出系统配置： Copy$ git config --system --list设置用户名： Copy$ git config --global user.name &#34;[firstname lastname]&#34;设置用户邮箱： Copy$ git config --global user.email &#34;[valid-email]&#34;设置 git 命令行输出为彩色： Copy$ git config --global color.ui auto设置 git 使用的文本编辑器： Copy$ git config --global core.editor vi配置文件 Repository 配置对应的配置文件路径 [–local]： Copy&lt;repo&gt;/.git/config用户全局配置对应的配置文件路径 [–global]： Copy~/.gitconfig系统配置对应的配置文件路径 [–system]： Copy/etc/gitconfig创建 复制一个已创建的仓库： Copy# 通过 SSH $ git clone ssh://user@domain.com/repo.git # 通过 HTTP $ git clone http://domain.com/user/repo.git在当前目录创建一个新的本地仓库： Copy$ git init在指定目录创建一个新的本地仓库： Copy$ git init &lt;directory&gt;本地修改 显示工作路径下已修改的文件： Copy$ git status显示提交文件的变化： Copy$ git diff显示指定文件的变化： Copy$ git diff &lt;file&gt;把当前所有修改添加到下次提交中： Copy$ git add .把对某个文件的修改添加到下次提交中： Copy$ git add -p &lt;file&gt;把指定文件的修改添加到下次提交中： Copy$ git add &lt;filename1&gt; &lt;filename2&gt;提交本地的所有修改： Copy$ git commit -a提交之前已标记的变化： Copy$ git commit附加消息提交： Copy$ git commit -m &#39;message here&#39;提交，并将提交时间设置为之前的某个日期： Copy$ git commit --date=&#34;`date --date=&#39;n day ago&#39;`&#34; -am &#34;Commit Message&#34;修改上次提交 请勿修改已发布的提交记录！">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+<script>
+  (function () {
+    var savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+</head>
+
+<body>
+  <div id="back-to-top"></div>
+
+  <header>
+    
+<div class="desktop-header">
+  <div class="desktop-header-logo">
+    <a href="/" class="logo">
+      
+      HELLO
+      
+    </a>
+  </div>
+
+  <nav class="desktop-navbar">
+    <ul id="menu" class="menu">
+      
+      
+      <li class="menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/">首页</a>
+        
+
+        
+
+      </li>
+      
+      <li class="menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/post/">归档</a>
+        
+
+        
+
+      </li>
+      
+      <li class="menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/tags/">标签</a>
+        
+
+        
+
+      </li>
+      
+
+      
+      
+
+      
+
+      <li class="menu-item">
+        <a class="theme-toggle menu-item-link" href="javascript:void(0);">
+          <span class="theme-icon theme-icon-light"><svg aria-hidden="true" class="hi-svg-inline icon--sun" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span>
+          <span class="theme-icon theme-icon-dark"><svg aria-hidden="true" class="hi-svg-inline icon--moon" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+</svg>
+</span>
+        </a>
+      </li>
+
+      <li class="menu-item">
+        <a class="menu-item-link" href="http://localhost:1313/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+          title="rss" target="_blank">
+          <svg aria-hidden="true" class="hi-svg-inline icon--rss" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>
+
+        </a>
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+    
+
+<div class="mobile-header">
+  <div id="mobile-navbar" class="mobile-navbar">
+    <div id="mobile-navbar-icon" class="mobile-navbar-icon">
+      <svg aria-hidden="true" class="hi-svg-inline icon--menu" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <line x1="4" x2="20" y1="12" y2="12" />
+  <line x1="4" x2="20" y1="6" y2="6" />
+  <line x1="4" x2="20" y1="18" y2="18" />
+</svg>
+
+    </div>
+    <div class="mobile-navbar-logo">
+      <a href="/%20/" class="logo">HELLO</a>
+    </div>
+  </div>
+
+  <div id="mobile-menu-close-modal" class="mobile-menu-close-modal"></div>
+  <nav id="mobile-menu" class="mobile-menu">
+    <ul class="mobile-menu-list">
+      <li class="mobile-menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/">首页</a>
+        
+        
+      </li><li class="mobile-menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/post/">归档</a>
+        
+        
+      </li><li class="mobile-menu-item">
+        
+        
+        
+        <a class="menu-item-link" href="http://localhost:1313/tags/">标签</a>
+        
+        
+      </li>
+      
+
+      
+
+      <li class="mobile-menu-item">
+        <a class="theme-toggle menu-item-link" href="javascript:void(0);">
+          <span class="theme-icon theme-icon-light"><svg aria-hidden="true" class="hi-svg-inline icon--sun" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 2v2" />
+  <path d="M12 20v2" />
+  <path d="m4.93 4.93 1.41 1.41" />
+  <path d="m17.66 17.66 1.41 1.41" />
+  <path d="M2 12h2" />
+  <path d="M20 12h2" />
+  <path d="m6.34 17.66-1.41 1.41" />
+  <path d="m19.07 4.93-1.41 1.41" />
+</svg>
+</span>
+          <span class="theme-icon theme-icon-dark"><svg aria-hidden="true" class="hi-svg-inline icon--moon" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+</svg>
+</span>
+        </a>
+      </li>
+
+      <li class="mobile-menu-item">
+        <a class="menu-item-link" href="http://localhost:1313/index.xml" rel="noopener alternate" type="application/rss&#43;xml"
+          title="rss" target="_blank">
+          <svg aria-hidden="true" class="hi-svg-inline icon--rss" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>
+
+        </a>
+        
+      </li>
+    </ul>
+  </nav>
+</div>
+
+  </header>
+
+  
+
+  
+
+
+
+  <main id="main" class="main pico container">
+    <div class="content-wrapper">
+  <aside class="sidebar">
+  </aside>
+  <div id="content" class="content">
+    <article class="post">
+      
+      <header class="post-header">
+        <h1 class="post-title">Git cheat sheet中文</h1>
+        
+
+
+
+        <div class="post-meta">
+  <div class="post-meta-author">
+    <svg aria-hidden="true" class="hi-svg-inline" fill="currentColor" height="1em" id="mdi-account-edit-outline" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M2 17V20H10V18.11H3.9V17C3.9 16.36 7.03 14.9 10 14.9C10.96 14.91 11.91 15.04 12.83 15.28L14.35 13.76C12.95 13.29 11.5 13.03 10 13C7.33 13 2 14.33 2 17M10 4C7.79 4 6 5.79 6 8S7.79 12 10 12 14 10.21 14 8 12.21 4 10 4M10 10C8.9 10 8 9.11 8 8S8.9 6 10 6 12 6.9 12 8 11.11 10 10 10M21.7 13.35L20.7 14.35L18.65 12.35L19.65 11.35C19.86 11.14 20.21 11.14 20.42 11.35L21.7 12.63C21.91 12.84 21.91 13.19 21.7 13.4M12 18.94L18.06 12.88L20.11 14.88L14.11 20.95H12V18.94" /></svg>
+    <a href="/about">
+      <span class="post-meta-author-name">
+        zuoguai
+      </span>
+    </a>
+    
+  </div>
+
+  <div class="post-meta-time">
+    <svg aria-hidden="true" class="hi-svg-inline" fill="currentColor" height="1em" id="mdi-calendar-range-outline" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg"><path d="M7 11H9V13H7V11M21 5V19C21 20.11 20.11 21 19 21H5C3.89 21 3 20.1 3 19V5C3 3.9 3.9 3 5 3H6V1H8V3H16V1H18V3H19C20.11 3 21 3.9 21 5M5 7H19V5H5V7M19 19V9H5V19H19M15 13H17V11H15V13M11 13H13V11H11V13Z" /></svg>
+    <time datetime=" 2024-10-20">
+      2024-10-20
+    </time>
+
+
+    
+
+  </div>
+
+
+  <div class="post-meta__right">
+    
+
+    
+
+
+    
+    
+
+
+    
+    
+  </div>
+</div>
+
+      </header>
+
+      
+      <div class="post-content">
+        <p>+++</p>
+<blockquote>
+<p>该文档从Git cheat sheet搬运，以便学习</p>
+</blockquote>
+<h3 id="索引">索引</h3>
+<ul>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#配置">配置</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#配置文件">配置文件</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#创建">创建</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#本地修改">本地修改</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#搜索">搜索</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#提交历史">提交历史</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#移动--重命名">移动/重命名</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#分支与标签">分支与标签</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#更新与发布">更新与发布</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#合并与重置">合并与重置</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#撤销">撤销</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#git-flow">Git Flow</a></li>
+</ul>
+<hr>
+<h3 id="配置">配置</h3>
+<h5 id="列出当前配置">列出当前配置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --list</code></pre>
+</div>
+<h5 id="列出-repository-配置">列出 repository 配置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --local --list</code></pre>
+</div>
+<h5 id="列出全局配置">列出全局配置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --global --list</code></pre>
+</div>
+<h5 id="列出系统配置">列出系统配置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --system --list</code></pre>
+</div>
+<h5 id="设置用户名">设置用户名：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --global user.name &#34;[firstname lastname]&#34;</code></pre>
+</div>
+<h5 id="设置用户邮箱">设置用户邮箱：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --global user.email &#34;[valid-email]&#34;</code></pre>
+</div>
+<h5 id="设置-git-命令行输出为彩色">设置 git 命令行输出为彩色：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --global color.ui auto</code></pre>
+</div>
+<h5 id="设置-git-使用的文本编辑器">设置 git 使用的文本编辑器：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git config --global core.editor vi</code></pre>
+</div>
+<hr>
+<h3 id="配置文件">配置文件</h3>
+<h5 id="repository-配置对应的配置文件路径---local">Repository 配置对应的配置文件路径 [&ndash;local]：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>&lt;repo&gt;/.git/config</code></pre>
+</div>
+<h5 id="用户全局配置对应的配置文件路径---global">用户全局配置对应的配置文件路径 [&ndash;global]：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>~/.gitconfig</code></pre>
+</div>
+<h5 id="系统配置对应的配置文件路径---system">系统配置对应的配置文件路径 [&ndash;system]：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>/etc/gitconfig</code></pre>
+</div>
+<hr>
+<h3 id="创建">创建</h3>
+<h5 id="复制一个已创建的仓库">复制一个已创建的仓库：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># 通过 SSH</span>
+</span></span><span style="display:flex;"><span>$ git clone ssh://user@domain.com/repo.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 通过 HTTP</span>
+</span></span><span style="display:flex;"><span>$ git clone http://domain.com/user/repo.git</span></span></code></pre></div>
+</div>
+<h5 id="在当前目录创建一个新的本地仓库">在当前目录创建一个新的本地仓库：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git init</code></pre>
+</div>
+<h5 id="在指定目录创建一个新的本地仓库">在指定目录创建一个新的本地仓库：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git init &lt;directory&gt;</code></pre>
+</div>
+<hr>
+<h3 id="本地修改">本地修改</h3>
+<h5 id="显示工作路径下已修改的文件">显示工作路径下已修改的文件：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git status</code></pre>
+</div>
+<h5 id="显示提交文件的变化">显示提交文件的变化：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git diff</code></pre>
+</div>
+<h5 id="显示指定文件的变化">显示指定文件的变化：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git diff &lt;file&gt;</code></pre>
+</div>
+<h5 id="把当前所有修改添加到下次提交中">把当前所有修改添加到下次提交中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git add .</code></pre>
+</div>
+<h5 id="把对某个文件的修改添加到下次提交中">把对某个文件的修改添加到下次提交中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git add -p &lt;file&gt;</code></pre>
+</div>
+<h5 id="把指定文件的修改添加到下次提交中">把指定文件的修改添加到下次提交中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git add &lt;filename1&gt; &lt;filename2&gt;</code></pre>
+</div>
+<h5 id="提交本地的所有修改">提交本地的所有修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit -a</code></pre>
+</div>
+<h5 id="提交之前已标记的变化">提交之前已标记的变化：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit</code></pre>
+</div>
+<h5 id="附加消息提交">附加消息提交：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit -m &#39;message here&#39;</code></pre>
+</div>
+<h5 id="提交并将提交时间设置为之前的某个日期">提交，并将提交时间设置为之前的某个日期：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit --date=&#34;`date --date=&#39;n day ago&#39;`&#34; -am &#34;Commit Message&#34;</code></pre>
+</div>
+<h5 id="修改上次提交">修改上次提交</h5>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->请勿修改已发布的提交记录！<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit --amend</code></pre>
+</div>
+<h5 id="修改上次提交的-committer-date">修改上次提交的 committer date：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>GIT_COMMITTER_DATE=&#34;date&#34; git commit --amend</code></pre>
+</div>
+<h5 id="修改上次提交的-author-date">修改上次提交的 author date：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git commit --amend --date=&#34;date&#34;</code></pre>
+</div>
+<h5 id="把当前分支中未提交的修改移动到其他分支">把当前分支中未提交的修改移动到其他分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git stash
+$ git checkout branch2
+$ git stash pop</code></pre>
+</div>
+<h5 id="将缓存的变化应用到当前分支">将缓存的变化应用到当前分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git stash apply</code></pre>
+</div>
+<h5 id="删除缓存的变化">删除缓存的变化：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git stash drop</code></pre>
+</div>
+<hr>
+<h3 id="搜索">搜索</h3>
+<h5 id="从当前目录的所有文件中查找文本内容">从当前目录的所有文件中查找文本内容：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git grep &#34;Hello&#34;</code></pre>
+</div>
+<h5 id="在某一版本中搜索文本">在某一版本中搜索文本：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git grep &#34;Hello&#34; v2.5</code></pre>
+</div>
+<h5 id="显示引入了特定关键字的提交">显示引入了特定关键字的提交：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log -S &#39;keyword&#39;</code></pre>
+</div>
+<h5 id="显示引入了特定关键字的提交使用正则表达式">显示引入了特定关键字的提交（使用正则表达式）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log -S &#39;keyword&#39; --pickaxe-regex</code></pre>
+</div>
+<hr>
+<h3 id="提交历史">提交历史</h3>
+<h5 id="从最新提交开始显示所有的提交记录显示-hash作者信息提交的标题和时间">从最新提交开始，显示所有的提交记录（显示 hash，作者信息，提交的标题和时间）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log</code></pre>
+</div>
+<h5 id="显示所有提交仅显示提交的-hash-和-message">显示所有提交（仅显示提交的 hash 和 message）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log --oneline</code></pre>
+</div>
+<h5 id="显示某个用户的所有提交">显示某个用户的所有提交：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log --author=&#34;username&#34;</code></pre>
+</div>
+<h5 id="显示某个文件的所有修改">显示某个文件的所有修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log -p &lt;file&gt;</code></pre>
+</div>
+<h5 id="显示远程-remotemaster-分支与远程-originmaster-分支提交记录的差集">显示远程 &lt;remote/master&gt; 分支与远程 &lt;origin/master&gt; 分支提交记录的差集：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git log --oneline &lt;origin/master&gt;..&lt;remote/master&gt; --left-right</code></pre>
+</div>
+<h5 id="谁在什么时间修改了文件的什么内容">谁，在什么时间，修改了文件的什么内容：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git blame &lt;file&gt;</code></pre>
+</div>
+<h5 id="显示-reflog">显示 reflog：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reflog show </code></pre>
+</div>
+<h5 id="删除-reflog">删除 reflog：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reflog delete</code></pre>
+</div>
+<hr>
+<h3 id="移动--重命名">移动 / 重命名</h3>
+<h5 id="重命名文件">重命名文件：</h5>
+<p>将 Index.txt 重命名为 Index.html</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git mv Index.txt Index.html</code></pre>
+</div>
+<hr>
+<h3 id="分支与标签">分支与标签</h3>
+<h5 id="列出所有的本地分支">列出所有的本地分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch</code></pre>
+</div>
+<h5 id="列出所有的本地远程分支">列出所有的本地/远程分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch -a</code></pre>
+</div>
+<h5 id="列出所有的远程分支">列出所有的远程分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch -r</code></pre>
+</div>
+<h5 id="切换分支">切换分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout &lt;branch&gt;</code></pre>
+</div>
+<h5 id="从不同的分支单个文件">从不同的分支单个文件：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout &lt;branch&gt; -- &lt;filename&gt;</code></pre>
+</div>
+<h5 id="创建并切换到新分支">创建并切换到新分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout -b &lt;branch&gt;</code></pre>
+</div>
+<h5 id="切换到之前的分支">切换到之前的分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout -</code></pre>
+</div>
+<h5 id="从现有的分支创建一个新的分支并切换到新的分支">从现有的分支创建一个新的分支，并切换到新的分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout -b &lt;new_branch&gt; &lt;existing_branch&gt;</code></pre>
+</div>
+<h5 id="从现有的提交创建一个新的分支并切换到新的分支">从现有的提交创建一个新的分支，并切换到新的分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout &lt;commit-hash&gt; -b &lt;new_branch_name&gt;</code></pre>
+</div>
+<h5 id="基于当前分支创建新分支">基于当前分支创建新分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch &lt;new-branch&gt;</code></pre>
+</div>
+<h5 id="基于远程分支创建新的可追溯的分支">基于远程分支创建新的可追溯的分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch --track &lt;new-branch&gt; &lt;remote-branch&gt;</code></pre>
+</div>
+<h5 id="删除本地分支">删除本地分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch -d &lt;branch&gt;</code></pre>
+</div>
+<h5 id="强制删除一个本地分支">强制删除一个本地分支：</h5>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->将会丢失未合并的修改！<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch -D &lt;branch&gt;</code></pre>
+</div>
+<h5 id="给当前分支打标签">给当前分支打标签：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git tag &lt;tag-name&gt;</code></pre>
+</div>
+<h5 id="给当前分支打标签并打开编辑器附加消息">给当前分支打标签并打开编辑器附加消息：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git tag -a &lt;tag-name&gt;</code></pre>
+</div>
+<h5 id="给当前分支打标签并附加消息">给当前分支打标签并附加消息：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git tag &lt;tag-name&gt; -am &#39;message here&#39;</code></pre>
+</div>
+<h5 id="列出所有标签">列出所有标签：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git tag</code></pre>
+</div>
+<h5 id="列出所有标签及其附加信息标签信息或提交信息">列出所有标签及其附加信息（标签信息或提交信息）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git tag -n</code></pre>
+</div>
+<hr>
+<h3 id="更新与发布">更新与发布</h3>
+<h5 id="列出当前配置的远程仓库">列出当前配置的远程仓库：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote -v</code></pre>
+</div>
+<h5 id="显示远程仓库的信息">显示远程仓库的信息：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote show &lt;remote&gt;</code></pre>
+</div>
+<h5 id="添加新的远程仓库命名为-remote">添加新的远程仓库，命名为 <!-- raw HTML omitted -->：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote add &lt;remote&gt; &lt;url&gt;</code></pre>
+</div>
+<h5 id="重命名远程仓库remote-修改为-new_remote">重命名远程仓库，<!-- raw HTML omitted --> 修改为 &lt;new_remote&gt;：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote rename &lt;remote&gt; &lt;new_remote&gt;</code></pre>
+</div>
+<h5 id="删除远程">删除远程：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote rm &lt;remote&gt;</code></pre>
+</div>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->注意：git remote rm 不会从服务器上删除远程仓库。它只是从本地仓库中删除远程文件及其引用。<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<h5 id="从远程仓库下载所有修改但不合并到-head-中">从远程仓库下载所有修改，但不合并到 HEAD 中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git fetch &lt;remote&gt;</code></pre>
+</div>
+<h5 id="从远程仓库下载所有修改并自动与-head-合并">从远程仓库下载所有修改，并自动与 HEAD 合并：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git remote pull &lt;remote&gt; &lt;url&gt;</code></pre>
+</div>
+<h5 id="将合并到本地仓库中">将合并到本地仓库中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git pull origin master</code></pre>
+</div>
+<h5 id="以-rebase-方式将远程分支与本地合并">以 rebase 方式将远程分支与本地合并：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git pull --rebase &lt;remote&gt; &lt;branch&gt;</code></pre>
+</div>
+<h5 id="将本地修改发布到远程仓库">将本地修改发布到远程仓库：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git push remote &lt;remote&gt; &lt;branch&gt;</code></pre>
+</div>
+<h5 id="删除远程分支">删除远程分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git push &lt;remote&gt; :&lt;branch&gt; (since Git v1.5.0)</code></pre>
+</div>
+<p>或</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git push &lt;remote&gt; --delete &lt;branch&gt; (since Git v1.7.0)</code></pre>
+</div>
+<h5 id="发布标签">发布标签：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git push --tags</code></pre>
+</div>
+<hr>
+<h3 id="合并与重置">合并与重置</h3>
+<h5 id="将分支合并到当前-head-中">将分支合并到当前 HEAD 中：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git merge &lt;branch&gt;</code></pre>
+</div>
+<h5 id="列出合并的分支">列出合并的分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git branch --merged</code></pre>
+</div>
+<h5 id="将当前-head-版本重置到分支中">将当前 HEAD 版本重置到分支中：</h5>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted -->请勿重置已发布的提交！<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rebase &lt;branch&gt;</code></pre>
+</div>
+<h5 id="终止重置">终止重置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rebase --abort</code></pre>
+</div>
+<h5 id="解决冲突后继续重置">解决冲突后继续重置：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rebase --continue</code></pre>
+</div>
+<h5 id="将合并工具全局配置为-meld编辑器">将合并工具全局配置为 meld（编辑器）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git config --global merge.tool meld</span></span></code></pre></div>
+</div>
+<h5 id="使用配置好的-merge-tool-解决冲突">使用配置好的 merge tool 解决冲突：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git mergetool</code></pre>
+</div>
+<h5 id="在编辑器中手动解决冲突后将文件标记为已解决冲突">在编辑器中手动解决冲突后，将文件标记为已解决冲突：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git add &lt;resolved-file&gt;</code></pre>
+</div>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rm &lt;resolved-file&gt;</code></pre>
+</div>
+<h5 id="合并提交">合并提交：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rebase -i &lt;commit-just-before-first&gt;</code></pre>
+</div>
+<p>把下面的内容：</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>pick &lt;commit_id&gt;
+pick &lt;commit_id2&gt;
+pick &lt;commit_id3&gt;</code></pre>
+</div>
+<p>替换为：</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>pick &lt;commit_id&gt;
+squash &lt;commit_id2&gt;
+squash &lt;commit_id3&gt;</code></pre>
+</div>
+<hr>
+<h3 id="撤销">撤销</h3>
+<h5 id="放弃工作目录下的所有修改">放弃工作目录下的所有修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reset --hard HEAD</code></pre>
+</div>
+<h5 id="移除缓存区的所有文件即撤销上次-git-add">移除缓存区的所有文件（即，撤销上次 <code>git add</code>）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reset HEAD</code></pre>
+</div>
+<h5 id="放弃某个文件的所有本地修改">放弃某个文件的所有本地修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git checkout HEAD &lt;file&gt;</code></pre>
+</div>
+<h5 id="重置一个提交通过创建一个截然不同的新提交">重置一个提交（通过创建一个截然不同的新提交）：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git revert &lt;commit&gt;</code></pre>
+</div>
+<h5 id="将-head-重置到指定的版本并放弃该版本之后的所有修改">将 HEAD 重置到指定的版本，并放弃该版本之后的所有修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reset --hard &lt;commit&gt;</code></pre>
+</div>
+<h5 id="用远程分支强制覆盖本地分支">用远程分支强制覆盖本地分支：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git reset --hard &lt;remote/branch&gt; e.g., upstream/master, origin/my-feature</code></pre>
+</div>
+<h5 id="将-head-重置到上一次提交的版本并将之后的修改标记为未添加到缓存区">将 HEAD 重置到上一次提交的版本，并将之后的修改标记为未添加到缓存区：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reset &lt;commit&gt;</code></pre>
+</div>
+<h5 id="将-head-重置到上一次提交的版本并保留未提交的本地修改">将 HEAD 重置到上一次提交的版本，并保留未提交的本地修改：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git reset --keep &lt;commit&gt;</code></pre>
+</div>
+<h5 id="删除添加-gitignore-文件前错误提交的文件">删除添加 <code>.gitignore</code> 文件前错误提交的文件：</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git rm -r --cached .
+$ git add .
+$ git commit -m &#34;remove xyz file&#34;</code></pre>
+</div>
+<hr>
+<h2 id="git-flow">Git-Flow</h2>
+<h3 id="索引-1">索引</h3>
+<ul>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#安装">安装</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#开始">开始</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#特性">特性</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#制作-release-版本">制作 release 版本</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#热修复">热修复</a></li>
+<li><a href="/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#命令">命令</a></li>
+</ul>
+<hr>
+<h3 id="安装">安装</h3>
+<ul>
+<li>你需要有一个可以工作的 git 作为前提。</li>
+<li>Git flow 可以工作在 OSX，Linux 和 Windows 之下。</li>
+</ul>
+<h5 id="osx-homebrew">OSX Homebrew</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ brew install git-flow</code></pre>
+</div>
+<h5 id="osx-macports">OSX Macports</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ port install git-flow</code></pre>
+</div>
+<h5 id="linux">Linux</h5>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ apt-get install git-flow</code></pre>
+</div>
+<h5 id="windows-cygwin">Windows (Cygwin)</h5>
+<p>安装 git-flow，你需要 wget 和 util-linux。</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash</code></pre>
+</div>
+<hr>
+<h3 id="开始">开始</h3>
+<ul>
+<li>为了自定义你的项目，Git flow 需要初始化。</li>
+<li>使用 git-flow，从初始化一个现有的 git 库内开始。</li>
+<li>初始化，你必须回答几个关于分支的命名约定的问题。建议使用默认值。</li>
+</ul>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow init</code></pre>
+</div>
+<hr>
+<h3 id="特性">特性</h3>
+<ul>
+<li>为即将发布的版本开发新功能特性。</li>
+<li>这通常只存在于开发者的仓库中。</li>
+</ul>
+<h5 id="创建一个新特性">创建一个新特性</h5>
+<p>下面操作创建了一个基于 &lsquo;develop&rsquo; 的新特性分支，并切换到该分支。</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow feature start MYFEATURE</code></pre>
+</div>
+<h5 id="完成新特性的开发">完成新特性的开发</h5>
+<p>完成开发新特性。这个动作执行以下操作：</p>
+<ol>
+<li>将 MYFEATURE 分支合并到 &lsquo;develop&rsquo;</li>
+<li>删除这个新特性分支</li>
+<li>切换回 &lsquo;develop&rsquo; 分支</li>
+</ol>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow feature finish MYFEATURE</code></pre>
+</div>
+<h5 id="发布新特性">发布新特性</h5>
+<ul>
+<li>你是否合作开发一项新特性？</li>
+<li>发布新特性分支到远程服务器，以便其它用户使用该分支。</li>
+</ul>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow feature publish MYFEATURE</code></pre>
+</div>
+<h5 id="获取发布的新特性分支">获取发布的新特性分支</h5>
+<p>获取由其它用户发布的新特性分支。</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow feature pull origin MYFEATURE</code></pre>
+</div>
+<h5 id="追溯远程上的特性">追溯远程上的特性</h5>
+<p>通过下面的命令追溯远程上的特性</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow feature track MYFEATURE</code></pre>
+</div>
+<hr>
+<h3 id="制作-release-版本">制作 release 版本</h3>
+<ul>
+<li>支持一个新的用于生产环境的发布版本。</li>
+<li>允许修复小问题，并为发布版本准备元数据。</li>
+</ul>
+<h5 id="开始创建-release-版本">开始创建 release 版本</h5>
+<ul>
+<li>使用 git flow release 命令创建 release 版本。</li>
+<li>&lsquo;release&rsquo; 分支基于 &lsquo;develop&rsquo; 分支创建。</li>
+<li>你可以选择提供一个 [BASE] 参数，即提交记录的 sha-1 hash 值，来开启 release 分支。</li>
+<li>这个提交记录的 sha-1 hash 值必须是 &lsquo;develop&rsquo; 分支下的。</li>
+</ul>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow release start RELEASE [BASE]</code></pre>
+</div>
+<p>明智的做法是在创建 release 分支之后立即发布，允许其它用户向这个 release 分支提交内容。使用类似发布新特性的命令：</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow release publish RELEASE</code></pre>
+</div>
+<p>(你可以通过 <code>git flow release track RELEASE</code> 命令追溯远程的 release 版本)</p>
+<h5 id="完成-release-版本">完成 release 版本</h5>
+<p>完成 release 版本是一个 git 分支的重要操作之一。它执行以下几个动作：</p>
+<ol>
+<li>归并 release 分支到 &lsquo;master&rsquo; 分支</li>
+<li>用 release 分支名打标签</li>
+<li>归并 release 分支到 &lsquo;develop&rsquo; 分支</li>
+<li>移除 release 分支</li>
+</ol>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow release finish RELEASE</code></pre>
+</div>
+<p>不要忘记使用 <code>git push --tags</code> 将标签推送到远程。</p>
+<hr>
+<h3 id="热修复">热修复</h3>
+<p>热修复来自这样的需求：生产环境的版本处于非预期状态时需要立即采取行动。有可能是需要修复 master 分支上某个标记的生产版本。</p>
+<h5 id="开始-git-flow-热修复">开始 git flow 热修复</h5>
+<p>像其它 git flow 命令一样，热修复分支开始自：</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>$ git flow hotfix start VERSION [BASENAME]</code></pre>
+</div>
+<p>VERSION 参数标记新的热修复发布名称。你还可以指定从哪个 <code>[BASENAME]</code> 开始，<code>[BASENAME]</code> 是完成 release 版本时填写的版本号。</p>
+<h5 id="完成热修复">完成热修复</h5>
+<p>当完成热修复，分支代码将被合并到 develop 和 master 分支。相应地，master 分支打上热修复版本的标签。</p>
+<div class="highlight-container">
+
+  <button class="copy-code-btn outline">Copy</button>
+
+  
+  <pre tabindex="0"><code>git flow hotfix finish VERSION</code></pre>
+</div>
+
+      </div>
+
+      
+      
+<div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">zuoguai</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+      2024-10-20
+      
+    </span>
+  </p>
+  
+  <p class="copyright-item">
+    <span class="item-title">License</span>
+    <span class="item-content"><a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank">CC BY-NC-ND 4.0</a></span>
+  </p>
+</div>
+
+
+
+      
+      
+
+
+      <footer class="post-footer">
+        <div class="post-tags">
+          <a href="http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/">编程</a>
+          
+        </div>
+
+
+        
+        <nav class="post-nav">
+          
+          
+        </nav>
+      </footer>
+    </article>
+
+    
+    
+
+
+    
+    
+
+  
+
+  
+  
+
+  
+  
+
+  
+
+  <div class="disqus-comment comment">
+  <div class="disqus-button" id="load_disqus" onclick="load_disqus()">
+    Show Disqus Comments
+  </div>
+  <div id="disqus_thread"></div>
+  <script type="text/javascript">
+    var disqus_config = function () {
+      this.page.url = "http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/";
+    };
+    function load_disqus() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = '文武';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+
+      $('#load_disqus').remove();
+    };
+  </script>
+  <noscript
+    >Please enable JavaScript to view the
+    <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+  </noscript>
+  
+</div>
+
+
+    
+
+  
+
+  
+
+
+  </div>
+
+  
+  <nav class="toc" id="toc">
+    <div class="toc-title">Table of Contents</div>
+    <div class="toc-content custom-scrollbar">
+      <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#索引">索引</a></li>
+        <li><a href="#配置">配置</a></li>
+        <li><a href="#配置文件">配置文件</a></li>
+        <li><a href="#创建">创建</a></li>
+        <li><a href="#本地修改">本地修改</a></li>
+        <li><a href="#搜索">搜索</a></li>
+        <li><a href="#提交历史">提交历史</a></li>
+        <li><a href="#移动--重命名">移动 / 重命名</a></li>
+        <li><a href="#分支与标签">分支与标签</a></li>
+        <li><a href="#更新与发布">更新与发布</a></li>
+        <li><a href="#合并与重置">合并与重置</a></li>
+        <li><a href="#撤销">撤销</a></li>
+      </ul>
+    </li>
+    <li><a href="#git-flow">Git-Flow</a>
+      <ul>
+        <li><a href="#索引-1">索引</a></li>
+        <li><a href="#安装">安装</a></li>
+        <li><a href="#开始">开始</a></li>
+        <li><a href="#特性">特性</a></li>
+        <li><a href="#制作-release-版本">制作 release 版本</a></li>
+        <li><a href="#热修复">热修复</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+  </nav>
+
+
+</div>
+  </main>
+
+  <footer id="footer" class="footer">
+    <div class="icon-links">
+  
+
+
+
+
+<a href="http://localhost:1313/index.xml" rel="noopener alternate" type="application/rss&#43;xml" class="icon-link" title="rss"
+  target="_blank">
+  <svg aria-hidden="true" class="hi-svg-inline icon--rss" fill="none" height="1em" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" width="1em" xmlns="http://www.w3.org/2000/svg">
+  <path d="M4 11a9 9 0 0 1 9 9" />
+  <path d="M4 4a16 16 0 0 1 16 16" />
+  <circle cx="5" cy="19" r="1" />
+</svg>
+
+</a>
+
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - <a class="theme-link" href="https://github.com/xianmin/hugo-theme-jane">Jane</a>
+  </span>
+
+  <span class="copyright-year">
+    &copy;
+    
+      2017 -
+    2024
+    <span class="heart">
+      
+      <i class="iconfont">
+        <svg class="icon" viewBox="0 0 1025 1024" version="1.1"
+  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+  width="14" height="14">
+  <path d="M1000.1 247.9c-15.5-37.3-37.6-70.6-65.7-98.9-54.4-54.8-125.8-85-201-85-85.7 0-166 39-221.4 107.4C456.6 103 376.3 64 290.6 64c-75.1 0-146.5 30.4-201.1 85.6-28.2 28.5-50.4 61.9-65.8 99.3-16 38.8-24 79.9-23.6 122.2 0.7 91.7 40.1 177.2 108.1 234.8 3.1 2.6 6 5.1 8.9 7.8 14.9 13.4 58 52.8 112.6 102.7 93.5 85.5 209.9 191.9 257.5 234.2 7 6.1 15.8 9.5 24.9 9.5 9.2 0 18.1-3.4 24.9-9.5 34.5-30.7 105.8-95.9 181.4-165 74.2-67.8 150.9-138 195.8-178.2 69.5-57.9 109.6-144.4 109.9-237.3 0.1-42.5-8-83.6-24-122.2z"
+   fill="#8a8a8a"></path>
+</svg>
+
+      </i>
+    </span><span class="author">
+        文成武德，千秋万载
+        
+      </span></span>
+
+  
+  
+
+  
+</div>
+
+  </footer>
+
+  
+
+
+
+
+<script type="text/javascript" src="/js/main.8ed2ce9819e5b96a5ce1e7324c2c2f8f9894031c70b75376adc378342d0e3937.js" integrity="sha256-jtLOmBnluWpc4ecyTCwvj5iUAxxwt1N2rcN4NC0OOTc=" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe.min.js"></script>
+    <script type="text/javascript" src="/lib/photoswipe/photoswipe-ui-default.min.js"></script>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

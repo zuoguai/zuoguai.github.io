@@ -9,10 +9,1028 @@
     <managingEditor>zuoguai2023@foxmail.com (zuoguai)</managingEditor>
     <webMaster>zuoguai2023@foxmail.com (zuoguai)</webMaster>
     <copyright>文成武德，千秋万载</copyright>
-    <lastBuildDate>Wed, 09 Oct 2024 20:51:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 20 Oct 2024 00:00:00 +0000</lastBuildDate>
     
         <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Git cheat sheet中文</title>
+      <link>http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/</link>
+      <pubDate>Sun, 20 Oct 2024 00:00:00 +0000</pubDate>
+      <author>zuoguai2023@foxmail.com (zuoguai)</author>
+      <guid>http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/</guid>
+      
+        <description>&lt;p&gt;+++&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;该文档从Git cheat sheet搬运，以便学习&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h3 id=&#34;索引&#34;&gt;索引&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#配置&#34;&gt;配置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#配置文件&#34;&gt;配置文件&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#创建&#34;&gt;创建&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#本地修改&#34;&gt;本地修改&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#搜索&#34;&gt;搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#提交历史&#34;&gt;提交历史&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#移动--重命名&#34;&gt;移动/重命名&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#分支与标签&#34;&gt;分支与标签&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#更新与发布&#34;&gt;更新与发布&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#合并与重置&#34;&gt;合并与重置&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#撤销&#34;&gt;撤销&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#git-flow&#34;&gt;Git Flow&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;配置&#34;&gt;配置&lt;/h3&gt;
+&lt;h5 id=&#34;列出当前配置&#34;&gt;列出当前配置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --list&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出-repository-配置&#34;&gt;列出 repository 配置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --local --list&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出全局配置&#34;&gt;列出全局配置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --global --list&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出系统配置&#34;&gt;列出系统配置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --system --list&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;设置用户名&#34;&gt;设置用户名：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --global user.name &amp;#34;[firstname lastname]&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;设置用户邮箱&#34;&gt;设置用户邮箱：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --global user.email &amp;#34;[valid-email]&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;设置-git-命令行输出为彩色&#34;&gt;设置 git 命令行输出为彩色：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --global color.ui auto&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;设置-git-使用的文本编辑器&#34;&gt;设置 git 使用的文本编辑器：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git config --global core.editor vi&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;配置文件&#34;&gt;配置文件&lt;/h3&gt;
+&lt;h5 id=&#34;repository-配置对应的配置文件路径---local&#34;&gt;Repository 配置对应的配置文件路径 [&amp;ndash;local]：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;&amp;lt;repo&amp;gt;/.git/config&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;用户全局配置对应的配置文件路径---global&#34;&gt;用户全局配置对应的配置文件路径 [&amp;ndash;global]：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;~/.gitconfig&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;系统配置对应的配置文件路径---system&#34;&gt;系统配置对应的配置文件路径 [&amp;ndash;system]：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/etc/gitconfig&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;创建&#34;&gt;创建&lt;/h3&gt;
+&lt;h5 id=&#34;复制一个已创建的仓库&#34;&gt;复制一个已创建的仓库：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 通过 SSH&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git clone ssh://user@domain.com/repo.git
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 通过 HTTP&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git clone http://domain.com/user/repo.git&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;在当前目录创建一个新的本地仓库&#34;&gt;在当前目录创建一个新的本地仓库：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git init&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;在指定目录创建一个新的本地仓库&#34;&gt;在指定目录创建一个新的本地仓库：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git init &amp;lt;directory&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;本地修改&#34;&gt;本地修改&lt;/h3&gt;
+&lt;h5 id=&#34;显示工作路径下已修改的文件&#34;&gt;显示工作路径下已修改的文件：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git status&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示提交文件的变化&#34;&gt;显示提交文件的变化：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git diff&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示指定文件的变化&#34;&gt;显示指定文件的变化：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git diff &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;把当前所有修改添加到下次提交中&#34;&gt;把当前所有修改添加到下次提交中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git add .&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;把对某个文件的修改添加到下次提交中&#34;&gt;把对某个文件的修改添加到下次提交中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git add -p &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;把指定文件的修改添加到下次提交中&#34;&gt;把指定文件的修改添加到下次提交中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git add &amp;lt;filename1&amp;gt; &amp;lt;filename2&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;提交本地的所有修改&#34;&gt;提交本地的所有修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit -a&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;提交之前已标记的变化&#34;&gt;提交之前已标记的变化：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;附加消息提交&#34;&gt;附加消息提交：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit -m &amp;#39;message here&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;提交并将提交时间设置为之前的某个日期&#34;&gt;提交，并将提交时间设置为之前的某个日期：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit --date=&amp;#34;`date --date=&amp;#39;n day ago&amp;#39;`&amp;#34; -am &amp;#34;Commit Message&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;修改上次提交&#34;&gt;修改上次提交&lt;/h5&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;请勿修改已发布的提交记录！&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit --amend&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;修改上次提交的-committer-date&#34;&gt;修改上次提交的 committer date：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;GIT_COMMITTER_DATE=&amp;#34;date&amp;#34; git commit --amend&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;修改上次提交的-author-date&#34;&gt;修改上次提交的 author date：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git commit --amend --date=&amp;#34;date&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;把当前分支中未提交的修改移动到其他分支&#34;&gt;把当前分支中未提交的修改移动到其他分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git stash
+$ git checkout branch2
+$ git stash pop&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将缓存的变化应用到当前分支&#34;&gt;将缓存的变化应用到当前分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git stash apply&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除缓存的变化&#34;&gt;删除缓存的变化：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git stash drop&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;搜索&#34;&gt;搜索&lt;/h3&gt;
+&lt;h5 id=&#34;从当前目录的所有文件中查找文本内容&#34;&gt;从当前目录的所有文件中查找文本内容：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git grep &amp;#34;Hello&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;在某一版本中搜索文本&#34;&gt;在某一版本中搜索文本：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git grep &amp;#34;Hello&amp;#34; v2.5&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示引入了特定关键字的提交&#34;&gt;显示引入了特定关键字的提交：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log -S &amp;#39;keyword&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示引入了特定关键字的提交使用正则表达式&#34;&gt;显示引入了特定关键字的提交（使用正则表达式）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log -S &amp;#39;keyword&amp;#39; --pickaxe-regex&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;提交历史&#34;&gt;提交历史&lt;/h3&gt;
+&lt;h5 id=&#34;从最新提交开始显示所有的提交记录显示-hash作者信息提交的标题和时间&#34;&gt;从最新提交开始，显示所有的提交记录（显示 hash，作者信息，提交的标题和时间）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示所有提交仅显示提交的-hash-和-message&#34;&gt;显示所有提交（仅显示提交的 hash 和 message）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log --oneline&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示某个用户的所有提交&#34;&gt;显示某个用户的所有提交：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log --author=&amp;#34;username&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示某个文件的所有修改&#34;&gt;显示某个文件的所有修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log -p &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示远程-remotemaster-分支与远程-originmaster-分支提交记录的差集&#34;&gt;显示远程 &amp;lt;remote/master&amp;gt; 分支与远程 &amp;lt;origin/master&amp;gt; 分支提交记录的差集：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git log --oneline &amp;lt;origin/master&amp;gt;..&amp;lt;remote/master&amp;gt; --left-right&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;谁在什么时间修改了文件的什么内容&#34;&gt;谁，在什么时间，修改了文件的什么内容：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git blame &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示-reflog&#34;&gt;显示 reflog：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reflog show &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除-reflog&#34;&gt;删除 reflog：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reflog delete&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;移动--重命名&#34;&gt;移动 / 重命名&lt;/h3&gt;
+&lt;h5 id=&#34;重命名文件&#34;&gt;重命名文件：&lt;/h5&gt;
+&lt;p&gt;将 Index.txt 重命名为 Index.html&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git mv Index.txt Index.html&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;分支与标签&#34;&gt;分支与标签&lt;/h3&gt;
+&lt;h5 id=&#34;列出所有的本地分支&#34;&gt;列出所有的本地分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出所有的本地远程分支&#34;&gt;列出所有的本地/远程分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch -a&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出所有的远程分支&#34;&gt;列出所有的远程分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch -r&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;切换分支&#34;&gt;切换分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;从不同的分支单个文件&#34;&gt;从不同的分支单个文件：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout &amp;lt;branch&amp;gt; -- &amp;lt;filename&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;创建并切换到新分支&#34;&gt;创建并切换到新分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout -b &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;切换到之前的分支&#34;&gt;切换到之前的分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout -&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;从现有的分支创建一个新的分支并切换到新的分支&#34;&gt;从现有的分支创建一个新的分支，并切换到新的分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout -b &amp;lt;new_branch&amp;gt; &amp;lt;existing_branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;从现有的提交创建一个新的分支并切换到新的分支&#34;&gt;从现有的提交创建一个新的分支，并切换到新的分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout &amp;lt;commit-hash&amp;gt; -b &amp;lt;new_branch_name&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;基于当前分支创建新分支&#34;&gt;基于当前分支创建新分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch &amp;lt;new-branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;基于远程分支创建新的可追溯的分支&#34;&gt;基于远程分支创建新的可追溯的分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch --track &amp;lt;new-branch&amp;gt; &amp;lt;remote-branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除本地分支&#34;&gt;删除本地分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch -d &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;强制删除一个本地分支&#34;&gt;强制删除一个本地分支：&lt;/h5&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;将会丢失未合并的修改！&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch -D &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;给当前分支打标签&#34;&gt;给当前分支打标签：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git tag &amp;lt;tag-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;给当前分支打标签并打开编辑器附加消息&#34;&gt;给当前分支打标签并打开编辑器附加消息：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git tag -a &amp;lt;tag-name&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;给当前分支打标签并附加消息&#34;&gt;给当前分支打标签并附加消息：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git tag &amp;lt;tag-name&amp;gt; -am &amp;#39;message here&amp;#39;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出所有标签&#34;&gt;列出所有标签：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git tag&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出所有标签及其附加信息标签信息或提交信息&#34;&gt;列出所有标签及其附加信息（标签信息或提交信息）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git tag -n&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;更新与发布&#34;&gt;更新与发布&lt;/h3&gt;
+&lt;h5 id=&#34;列出当前配置的远程仓库&#34;&gt;列出当前配置的远程仓库：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote -v&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;显示远程仓库的信息&#34;&gt;显示远程仓库的信息：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote show &amp;lt;remote&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;添加新的远程仓库命名为-remote&#34;&gt;添加新的远程仓库，命名为 &lt;!-- raw HTML omitted --&gt;：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote add &amp;lt;remote&amp;gt; &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;重命名远程仓库remote-修改为-new_remote&#34;&gt;重命名远程仓库，&lt;!-- raw HTML omitted --&gt; 修改为 &amp;lt;new_remote&amp;gt;：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote rename &amp;lt;remote&amp;gt; &amp;lt;new_remote&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除远程&#34;&gt;删除远程：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote rm &amp;lt;remote&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;注意：git remote rm 不会从服务器上删除远程仓库。它只是从本地仓库中删除远程文件及其引用。&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;h5 id=&#34;从远程仓库下载所有修改但不合并到-head-中&#34;&gt;从远程仓库下载所有修改，但不合并到 HEAD 中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git fetch &amp;lt;remote&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;从远程仓库下载所有修改并自动与-head-合并&#34;&gt;从远程仓库下载所有修改，并自动与 HEAD 合并：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git remote pull &amp;lt;remote&amp;gt; &amp;lt;url&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将合并到本地仓库中&#34;&gt;将合并到本地仓库中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git pull origin master&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;以-rebase-方式将远程分支与本地合并&#34;&gt;以 rebase 方式将远程分支与本地合并：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git pull --rebase &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将本地修改发布到远程仓库&#34;&gt;将本地修改发布到远程仓库：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git push remote &amp;lt;remote&amp;gt; &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除远程分支&#34;&gt;删除远程分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git push &amp;lt;remote&amp;gt; :&amp;lt;branch&amp;gt; (since Git v1.5.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;或&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git push &amp;lt;remote&amp;gt; --delete &amp;lt;branch&amp;gt; (since Git v1.7.0)&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;发布标签&#34;&gt;发布标签：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git push --tags&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;合并与重置&#34;&gt;合并与重置&lt;/h3&gt;
+&lt;h5 id=&#34;将分支合并到当前-head-中&#34;&gt;将分支合并到当前 HEAD 中：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git merge &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;列出合并的分支&#34;&gt;列出合并的分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git branch --merged&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将当前-head-版本重置到分支中&#34;&gt;将当前 HEAD 版本重置到分支中：&lt;/h5&gt;
+&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;请勿重置已发布的提交！&lt;!-- raw HTML omitted --&gt;&lt;!-- raw HTML omitted --&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rebase &amp;lt;branch&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;终止重置&#34;&gt;终止重置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rebase --abort&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;解决冲突后继续重置&#34;&gt;解决冲突后继续重置：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rebase --continue&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将合并工具全局配置为-meld编辑器&#34;&gt;将合并工具全局配置为 meld（编辑器）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ git config --global merge.tool meld&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;使用配置好的-merge-tool-解决冲突&#34;&gt;使用配置好的 merge tool 解决冲突：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git mergetool&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;在编辑器中手动解决冲突后将文件标记为已解决冲突&#34;&gt;在编辑器中手动解决冲突后，将文件标记为已解决冲突：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git add &amp;lt;resolved-file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rm &amp;lt;resolved-file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;合并提交&#34;&gt;合并提交：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rebase -i &amp;lt;commit-just-before-first&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;把下面的内容：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pick &amp;lt;commit_id&amp;gt;
+pick &amp;lt;commit_id2&amp;gt;
+pick &amp;lt;commit_id3&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;替换为：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;pick &amp;lt;commit_id&amp;gt;
+squash &amp;lt;commit_id2&amp;gt;
+squash &amp;lt;commit_id3&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;撤销&#34;&gt;撤销&lt;/h3&gt;
+&lt;h5 id=&#34;放弃工作目录下的所有修改&#34;&gt;放弃工作目录下的所有修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reset --hard HEAD&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;移除缓存区的所有文件即撤销上次-git-add&#34;&gt;移除缓存区的所有文件（即，撤销上次 &lt;code&gt;git add&lt;/code&gt;）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reset HEAD&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;放弃某个文件的所有本地修改&#34;&gt;放弃某个文件的所有本地修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git checkout HEAD &amp;lt;file&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;重置一个提交通过创建一个截然不同的新提交&#34;&gt;重置一个提交（通过创建一个截然不同的新提交）：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git revert &amp;lt;commit&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将-head-重置到指定的版本并放弃该版本之后的所有修改&#34;&gt;将 HEAD 重置到指定的版本，并放弃该版本之后的所有修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reset --hard &amp;lt;commit&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;用远程分支强制覆盖本地分支&#34;&gt;用远程分支强制覆盖本地分支：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git reset --hard &amp;lt;remote/branch&amp;gt; e.g., upstream/master, origin/my-feature&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将-head-重置到上一次提交的版本并将之后的修改标记为未添加到缓存区&#34;&gt;将 HEAD 重置到上一次提交的版本，并将之后的修改标记为未添加到缓存区：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reset &amp;lt;commit&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;将-head-重置到上一次提交的版本并保留未提交的本地修改&#34;&gt;将 HEAD 重置到上一次提交的版本，并保留未提交的本地修改：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git reset --keep &amp;lt;commit&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;删除添加-gitignore-文件前错误提交的文件&#34;&gt;删除添加 &lt;code&gt;.gitignore&lt;/code&gt; 文件前错误提交的文件：&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git rm -r --cached .
+$ git add .
+$ git commit -m &amp;#34;remove xyz file&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;git-flow&#34;&gt;Git-Flow&lt;/h2&gt;
+&lt;h3 id=&#34;索引-1&#34;&gt;索引&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#安装&#34;&gt;安装&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#开始&#34;&gt;开始&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#特性&#34;&gt;特性&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#制作-release-版本&#34;&gt;制作 release 版本&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#热修复&#34;&gt;热修复&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://localhost:1313/post/%E7%BC%96%E7%A8%8B/git%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3/#命令&#34;&gt;命令&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;安装&#34;&gt;安装&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;你需要有一个可以工作的 git 作为前提。&lt;/li&gt;
+&lt;li&gt;Git flow 可以工作在 OSX，Linux 和 Windows 之下。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;osx-homebrew&#34;&gt;OSX Homebrew&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ brew install git-flow&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;osx-macports&#34;&gt;OSX Macports&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ port install git-flow&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;linux&#34;&gt;Linux&lt;/h5&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ apt-get install git-flow&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;windows-cygwin&#34;&gt;Windows (Cygwin)&lt;/h5&gt;
+&lt;p&gt;安装 git-flow，你需要 wget 和 util-linux。&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ wget -q -O - --no-check-certificate https://github.com/nvie/gitflow/raw/develop/contrib/gitflow-installer.sh | bash&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;开始&#34;&gt;开始&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;为了自定义你的项目，Git flow 需要初始化。&lt;/li&gt;
+&lt;li&gt;使用 git-flow，从初始化一个现有的 git 库内开始。&lt;/li&gt;
+&lt;li&gt;初始化，你必须回答几个关于分支的命名约定的问题。建议使用默认值。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow init&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;特性&#34;&gt;特性&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;为即将发布的版本开发新功能特性。&lt;/li&gt;
+&lt;li&gt;这通常只存在于开发者的仓库中。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;创建一个新特性&#34;&gt;创建一个新特性&lt;/h5&gt;
+&lt;p&gt;下面操作创建了一个基于 &amp;lsquo;develop&amp;rsquo; 的新特性分支，并切换到该分支。&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow feature start MYFEATURE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;完成新特性的开发&#34;&gt;完成新特性的开发&lt;/h5&gt;
+&lt;p&gt;完成开发新特性。这个动作执行以下操作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;将 MYFEATURE 分支合并到 &amp;lsquo;develop&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;删除这个新特性分支&lt;/li&gt;
+&lt;li&gt;切换回 &amp;lsquo;develop&amp;rsquo; 分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow feature finish MYFEATURE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;发布新特性&#34;&gt;发布新特性&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;你是否合作开发一项新特性？&lt;/li&gt;
+&lt;li&gt;发布新特性分支到远程服务器，以便其它用户使用该分支。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow feature publish MYFEATURE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;获取发布的新特性分支&#34;&gt;获取发布的新特性分支&lt;/h5&gt;
+&lt;p&gt;获取由其它用户发布的新特性分支。&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow feature pull origin MYFEATURE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h5 id=&#34;追溯远程上的特性&#34;&gt;追溯远程上的特性&lt;/h5&gt;
+&lt;p&gt;通过下面的命令追溯远程上的特性&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow feature track MYFEATURE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;制作-release-版本&#34;&gt;制作 release 版本&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;支持一个新的用于生产环境的发布版本。&lt;/li&gt;
+&lt;li&gt;允许修复小问题，并为发布版本准备元数据。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 id=&#34;开始创建-release-版本&#34;&gt;开始创建 release 版本&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;使用 git flow release 命令创建 release 版本。&lt;/li&gt;
+&lt;li&gt;&amp;lsquo;release&amp;rsquo; 分支基于 &amp;lsquo;develop&amp;rsquo; 分支创建。&lt;/li&gt;
+&lt;li&gt;你可以选择提供一个 [BASE] 参数，即提交记录的 sha-1 hash 值，来开启 release 分支。&lt;/li&gt;
+&lt;li&gt;这个提交记录的 sha-1 hash 值必须是 &amp;lsquo;develop&amp;rsquo; 分支下的。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow release start RELEASE [BASE]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;明智的做法是在创建 release 分支之后立即发布，允许其它用户向这个 release 分支提交内容。使用类似发布新特性的命令：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow release publish RELEASE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;(你可以通过 &lt;code&gt;git flow release track RELEASE&lt;/code&gt; 命令追溯远程的 release 版本)&lt;/p&gt;
+&lt;h5 id=&#34;完成-release-版本&#34;&gt;完成 release 版本&lt;/h5&gt;
+&lt;p&gt;完成 release 版本是一个 git 分支的重要操作之一。它执行以下几个动作：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;归并 release 分支到 &amp;lsquo;master&amp;rsquo; 分支&lt;/li&gt;
+&lt;li&gt;用 release 分支名打标签&lt;/li&gt;
+&lt;li&gt;归并 release 分支到 &amp;lsquo;develop&amp;rsquo; 分支&lt;/li&gt;
+&lt;li&gt;移除 release 分支&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow release finish RELEASE&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;不要忘记使用 &lt;code&gt;git push --tags&lt;/code&gt; 将标签推送到远程。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;热修复&#34;&gt;热修复&lt;/h3&gt;
+&lt;p&gt;热修复来自这样的需求：生产环境的版本处于非预期状态时需要立即采取行动。有可能是需要修复 master 分支上某个标记的生产版本。&lt;/p&gt;
+&lt;h5 id=&#34;开始-git-flow-热修复&#34;&gt;开始 git flow 热修复&lt;/h5&gt;
+&lt;p&gt;像其它 git flow 命令一样，热修复分支开始自：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;$ git flow hotfix start VERSION [BASENAME]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;VERSION 参数标记新的热修复发布名称。你还可以指定从哪个 &lt;code&gt;[BASENAME]&lt;/code&gt; 开始，&lt;code&gt;[BASENAME]&lt;/code&gt; 是完成 release 版本时填写的版本号。&lt;/p&gt;
+&lt;h5 id=&#34;完成热修复&#34;&gt;完成热修复&lt;/h5&gt;
+&lt;p&gt;当完成热修复，分支代码将被合并到 develop 和 master 分支。相应地，master 分支打上热修复版本的标签。&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;git flow hotfix finish VERSION&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+</description>
+      
+    </item>
     
   </channel>
 </rss>
